@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 import time
 from random import random
-from typing import Tuple
+from typing import Tuple, Optional
 from flask import g
 
 app = Flask(__name__)
@@ -44,6 +44,37 @@ def generate_access_token(user: str) -> Tuple[str, int]:
     c.close()
     conn.commit()
     return (token, expiry)
+
+def get_username_for_access_token(token: str) -> Optional[str]:
+    """
+    Given a valid access token, return the username
+    If the token is expired or if the token is invalid, None will be returned
+    """
+    conn = sqlite3.connect('MoneyTransfer.db')
+    c = conn.cursor()
+    values = (token,)
+    c.execute("SELECT * FROM accessTokens WHERE token=?", values)
+    result = c.fetchone()
+    c.close()
+    conn.commit()
+    time_since_epoch = int(time.time())
+    if result is None or time_since_epoch > result[2]:
+        return None
+    else:
+        return result[0]
+
+def verify_user_exists(user: str) -> bool:
+    """
+    Given a username, checks to see if the user exists
+    """
+    conn = sqlite3.connect('MoneyTransfer.db')
+    c = conn.cursor()
+    values = (user,)
+    c.execute("SELECT username FROM users WHERE username=?", values)
+    result = c.fetchone()
+    c.close()
+    conn.commit()
+    return result is not None
 
 
 @app.route('/createaccount', methods=['POST'])
@@ -125,14 +156,6 @@ def login():
     else:
         abort(400)
 
-@app.route('/post')
-def post():
-    response = {
-        'name': 'Philippe',
-        'username': 'philippejlyu',
-        'country': 'Canada',
-    }
-    return jsonify(response)
 
 
 if __name__ == '__main__':
