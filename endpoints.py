@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
+import time
 from flask import g
 
 app = Flask(__name__)
@@ -19,6 +21,16 @@ def verify_non_duplicate_user(username: str) -> bool:
     else:
         conn.close()
         return False
+
+
+def generate_access_token(user: str) -> str:
+    """
+    Generates an access token for user and records it
+    Access token expires always after 1 hour
+    """
+
+
+
 
 
 @app.route('/createaccount', methods=['POST'])
@@ -44,13 +56,12 @@ def create_account():
 
         conn = sqlite3.connect('MoneyTransfer.db')
         c = conn.cursor()
-        hashed_password = password
+        hashed_password = generate_password_hash(password)
         credentials = (username, hashed_password)
         c.execute("INSERT INTO users VALUES ('%s', '%s', 0.0)" % credentials )
         conn.commit()
         conn.close()
         # TODO: Create an access token
-
         response = {
             'token': 'asdfasdf'
         }
