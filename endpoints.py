@@ -4,7 +4,6 @@ import sqlite3
 import time
 from random import random
 from typing import Tuple, Optional
-from flask import g
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -28,18 +27,7 @@ def verify_non_duplicate_user(username: str) -> bool:
     """
     Check to see if there is alrady a user with username
     """
-    conn = sqlite3.connect('MoneyTransfer.db')
-    c = conn.cursor()
-    t = (username,)
-    c.execute("SELECT * FROM users WHERE username=?", t)
-    if c.fetchone() is None:
-        c.close()
-        conn.commit()
-        return True
-    else:
-        c.close()
-        conn.commit()
-        return False
+    return get_user_record(username) is None
 
 
 def generate_access_token(user: str) -> Tuple[str, int]:
@@ -232,9 +220,6 @@ def transfer():
     conn.commit()
     response = { 'success': ''}
     return jsonify(response)
-
-
-
 
 
 if __name__ == '__main__':
