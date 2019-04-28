@@ -221,6 +221,37 @@ def transfer():
     response = { 'success': ''}
     return jsonify(response)
 
+@app.route('/canreceivemoney', methods=['GET'])
+def can_receive_money():
+    """
+    Returns whether or not a user can receive money i.e. a user exists
+    === Header ===
+    username: the username of the user we want info about
+    """
+    if verify_user_exists(request.headers['username']):
+        response = { 'userExists': True }
+        return jsonify(response)
+    else:
+        response = { 'userExists': False }
+        return jsonify(response)
+
+@app.route('/balance', methods=['GET'])
+def balance():
+    """
+    Return the balance of the current user.
+    === Header ===
+    token: The authorization token for the user we want information about
+    username: The username we want info about
+    """
+    username = get_username_for_access_token(request.headers['token'])
+    if username == request.headers['username']:
+        # Now we verified it's the correct person
+        user_record = get_user_record(username)
+        response = { 'username': user_record[0], 'balance': user_record[2] }
+        return jsonify(response)
+    else:
+        abort(401)
+
 
 if __name__ == '__main__':
     app.run()
