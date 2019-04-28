@@ -173,7 +173,7 @@ def transfer():
     token = request.headers['token']
     username = request.headers['username']
     recipient = request.headers['recipient']
-    amount = float(request.headers['amount'])
+    amount = abs(float(request.headers['amount']))
 
     # First verify sender's authentication
     name = get_username_for_access_token(token)
