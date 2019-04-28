@@ -89,13 +89,12 @@ def create_account():
     Verify there isn't another user with this name
 
     === Header ===
-    username: the username
-    password: the user password
+    Authorization: Basic Authorization header
     """
     conn = sqlite3.connect('MoneyTransfer.db')
     c = conn.cursor()
-    username = request.headers['username']
-    password = request.headers['password']
+    username = request.authorization['username']
+    password = request.authorization['password']
     if not verify_non_duplicate_user(username):
         response = {
             'error': 'Username is already in use'
@@ -126,13 +125,11 @@ def login():
     If it's correct, send back a token and expiry time
 
     === Header ===
-    username: the candiate username
-    password: the candidate password
-    :return:
+    Authorization: Basic Authorization header
     """
     if request.method == 'POST':
-        username = request.headers['username']
-        password = request.headers['password']
+        username = request.authorization['username']
+        password = request.authorization['password']
 
         conn = sqlite3.connect('MoneyTransfer.db')
         c = conn.cursor()
