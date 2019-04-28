@@ -100,6 +100,28 @@ def login():
         username = request.headers['username']
         password = request.headers['password']
 
+        conn = sqlite3.connect('MoneyTransfer.db')
+        c = conn.cursor()
+        t = (username,)
+        c.execute("SELECT * FROM users WHERE username=?", t)
+        user_data = c.fetchone()
+        c.close()
+        conn.commit()
+        invalid_credentials = {'error': 'Invalid username or password'}
+        if user_data is None:
+            return jsonify(invalid_credentials)
+        else:
+            user_info = user_data
+            if check_password_hash(user_info[1], password):
+                # We have successfully authenticated the user
+                token = generate_access_token(username)
+                response = {
+                    'token': token[0],
+                    'expiry': token[1]
+                }
+                return jsonify(response)
+            else:
+                return jsonify(invalid_credentials)
     else:
         abort(400)
 
