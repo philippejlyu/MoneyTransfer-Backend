@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b40dbac9-209b-4236-97f9-524b26cced3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoneyTransfer.db" beforeDir="false" afterPath="$PROJECT_DIR$/MoneyTransfer.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints.py" afterDir="false" />
     </list>
@@ -14,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1556415100251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1556417363437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$learnSqlite.coverage" NAME="learnSqlite Coverage Results" MODIFIED="1556413994205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -54,14 +52,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="334" />
-          <entry key="py" value="3580" />
+          <entry key="Python Console" value="831" />
+          <entry key="py" value="4553" />
           <entry key="sql" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3914" />
+          <entry key="Python" value="5384" />
           <entry key="Scratch" value="101" />
         </counts>
       </usages-collector>
@@ -72,16 +70,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/endpoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+            <state relative-caret-position="415">
+              <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
               <folding>
-                <marker date="1556415462439" expanded="true" signature="649:772" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="1780:1783" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="1811:1816" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="1811:1831" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="1981:2310" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="2129:2131" ph="..." />
-                <marker date="1556415462439" expanded="true" signature="2162:2310" ph="..." />
+                <marker date="1556417616113" expanded="true" signature="731:1381" ph="..." />
+                <marker date="1556417616113" expanded="true" signature="2428:2430" ph="..." />
+                <marker date="1556417616113" expanded="true" signature="2697:2950" ph="..." />
+                <marker date="1556417616113" expanded="true" signature="2769:2771" ph="..." />
+                <marker date="1556417616113" expanded="true" signature="2802:2950" ph="..." />
               </folding>
             </state>
           </provider>
@@ -261,19 +257,19 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2737968" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2737968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
@@ -324,16 +320,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/endpoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="415">
+          <caret line="99" column="9" lean-forward="true" selection-start-line="99" selection-start-column="9" selection-end-line="99" selection-end-column="9" />
           <folding>
-            <marker date="1556415462439" expanded="true" signature="649:772" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="1780:1783" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="1811:1816" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="1811:1831" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="1981:2310" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="2129:2131" ph="..." />
-            <marker date="1556415462439" expanded="true" signature="2162:2310" ph="..." />
+            <marker date="1556417616113" expanded="true" signature="731:1381" ph="..." />
+            <marker date="1556417616113" expanded="true" signature="2428:2430" ph="..." />
+            <marker date="1556417616113" expanded="true" signature="2697:2950" ph="..." />
+            <marker date="1556417616113" expanded="true" signature="2769:2771" ph="..." />
+            <marker date="1556417616113" expanded="true" signature="2802:2950" ph="..." />
           </folding>
         </state>
       </provider>
