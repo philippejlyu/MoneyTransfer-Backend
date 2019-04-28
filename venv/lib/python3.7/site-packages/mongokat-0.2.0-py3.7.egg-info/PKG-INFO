@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: mongokat
+Version: 0.2.0
+Summary: Lightweight MongoDB ORM/ODM
+Home-page: http://github.com/pricingassistant/mongokat
+Author: Pricing Assistant
+Author-email: contact@pricingassistant.com
+License: MIT
+Description: UNKNOWN
+Keywords: mongodb,mongo,orm,odm,mongokit
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
