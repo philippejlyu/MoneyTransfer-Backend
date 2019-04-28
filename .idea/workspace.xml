@@ -13,8 +13,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1556420067919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$learnSqlite.coverage" NAME="learnSqlite Coverage Results" MODIFIED="1556420273418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1556423941868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$learnSqlite.coverage" NAME="learnSqlite Coverage Results" MODIFIED="1556423874792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -53,14 +53,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="831" />
-          <entry key="py" value="6356" />
+          <entry key="Python Console" value="896" />
+          <entry key="py" value="9166" />
           <entry key="sql" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="7187" />
+          <entry key="Python" value="10062" />
           <entry key="Scratch" value="101" />
         </counts>
       </usages-collector>
@@ -71,14 +71,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/endpoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="72" column="68" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="68" />
+            <state relative-caret-position="226">
+              <caret line="216" column="60" lean-forward="true" selection-start-line="216" selection-start-column="4" selection-end-line="216" selection-end-column="60" />
               <folding>
-                <marker date="1556420226986" expanded="true" signature="2008:2301" ph="..." />
-                <marker date="1556420226986" expanded="true" signature="3348:3350" ph="..." />
-                <marker date="1556420226986" expanded="true" signature="3617:4803" ph="..." />
-                <marker date="1556420226986" expanded="true" signature="4621:4623" ph="..." />
-                <marker date="1556420226986" expanded="true" signature="4771:4803" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="342:683" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="2441:2762" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="3809:3810" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="4076:7208" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="5139:7208" ph="..." />
+                <marker date="1556423523603" expanded="true" signature="7204:7205" ph="..." />
               </folding>
             </state>
           </provider>
@@ -87,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/learnSqlite.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            <state relative-caret-position="263">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -190,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.learnSqlite">
+  <component name="RunManager" selected="Python.endpoints">
     <configuration name="endpoints" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MoneyTransfer-Backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,8 +242,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.learnSqlite" />
         <item itemvalue="Python.endpoints" />
+        <item itemvalue="Python.learnSqlite" />
       </list>
     </recent_temporary>
   </component>
@@ -263,13 +264,13 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2737968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2737968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -319,22 +320,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/endpoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="72" column="68" lean-forward="true" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="68" />
+        <state relative-caret-position="226">
+          <caret line="216" column="60" lean-forward="true" selection-start-line="216" selection-start-column="4" selection-end-line="216" selection-end-column="60" />
           <folding>
-            <marker date="1556420226986" expanded="true" signature="2008:2301" ph="..." />
-            <marker date="1556420226986" expanded="true" signature="3348:3350" ph="..." />
-            <marker date="1556420226986" expanded="true" signature="3617:4803" ph="..." />
-            <marker date="1556420226986" expanded="true" signature="4621:4623" ph="..." />
-            <marker date="1556420226986" expanded="true" signature="4771:4803" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="342:683" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="2441:2762" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="3809:3810" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="4076:7208" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="5139:7208" ph="..." />
+            <marker date="1556423523603" expanded="true" signature="7204:7205" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/learnSqlite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="263">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
         </state>
       </provider>
     </entry>

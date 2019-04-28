@@ -9,6 +9,21 @@ from flask import g
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+def get_user_record(username: str) -> Optional[Tuple]:
+    """
+    Return a tuple of the user information
+
+    Returns a tuple [username, hashed_password, balance]
+    """
+    conn = sqlite3.connect("MoneyTransfer.db")
+    c = conn.cursor()
+    t = (username,)
+    c.execute("SELECT * FROM users WHERE username=?", t)
+    result = c.fetchone()
+    c.close()
+    conn.commit()
+    return result
+
 def verify_non_duplicate_user(username: str) -> bool:
     """
     Check to see if there is alrady a user with username
@@ -18,10 +33,12 @@ def verify_non_duplicate_user(username: str) -> bool:
     t = (username,)
     c.execute("SELECT * FROM users WHERE username=?", t)
     if c.fetchone() is None:
-        conn.close()
+        c.close()
+        conn.commit()
         return True
     else:
-        conn.close()
+        c.close()
+        conn.commit()
         return False
 
 
@@ -114,8 +131,6 @@ def create_account():
         return jsonify(response)
 
 
-
-
 @app.route('/login', methods=['POST'])
 def login():
     """
@@ -155,6 +170,70 @@ def login():
                 return jsonify(invalid_credentials)
     else:
         abort(400)
+
+@app.route('/transfer', methods=["POST"])
+def transfer():
+    """
+    Transfer money from one person to another
+
+    === Header ===
+    token: The token that was given by the server to the client
+    username: The username of the person sending the money
+    recipient: The username of the recipient
+    amount: The amount of money being sent
+
+    === Preconditions ===
+    amount is an number
+    """
+    token = request.headers['token']
+    username = request.headers['username']
+    recipient = request.headers['recipient']
+    amount = float(request.headers['amount'])
+
+    # First verify sender's authentication
+    name = get_username_for_access_token(token)
+    if name != username:
+        response = {'error': 'Token could be expired or be invalid'}
+        return jsonify(response)
+
+    # Now verify to see recipient is valid
+    if not verify_user_exists(recipient):
+        response = { 'error': 'The recipient does not exist'}
+        return jsonify(response)
+
+
+    # See if the sender has enough money to send
+    sender_record = get_user_record(username)
+    recipient_record = get_user_record(recipient)
+    if sender_record[2] < amount:
+        # They don't have enough money
+        response = { 'error': 'Insufficient balance'}
+        return jsonify(response)
+
+    # Now create a transaction record
+    conn = sqlite3.connect('MoneyTransfer.db')
+    c = conn.cursor()
+    time_since_epoch = int(time.time())
+    values = (username, recipient, amount, time_since_epoch)
+    c.execute("INSERT INTO transactions VALUES ('%s', '%s', %f, %i)" % values)
+
+    # Now subtract the money from the sender
+    new_sender_balance = sender_record[2] - amount
+    new_recipient_balance = recipient_record[2] + amount
+
+    temp_data = (new_sender_balance, username,)
+    c.execute("UPDATE users SET balance=? WHERE username=?", temp_data)
+    # Now add the money to the recipient
+
+    temp_data = (new_recipient_balance, recipient)
+    c.execute("UPDATE users SET balance=? WHERE username=?", temp_data)
+    # Send a response if it got to this point with a confirmation code maybe?
+    c.close()
+    conn.commit()
+    response = { 'success': ''}
+    return jsonify(response)
+
+
 
 
 
