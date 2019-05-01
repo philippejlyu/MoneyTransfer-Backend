@@ -249,6 +249,28 @@ def balance():
     else:
         abort(401)
 
+@app.route('/transactions', methods=['GET'])
+def transactions():
+    """
+    === Header ===
+    token: Authorization token
+    username: The username of the user
+
+    """
+    token = request.headers['token']
+    username = request.headers['username']
+    candiate_username = get_username_for_access_token(token)
+
+    if username == candiate_username:
+        conn = sqlite3.connect("MoneyTransfer.db")
+        c = conn.cursor()
+        t = (username,)
+        c.execute("SELECT * FROM transactions WHERE sender=?", t)
+        outgoing = c.fetchall()
+        c.execute("SELECT * FROM transactions WHERE recipient=?", t)
+        incoming = c.fetchall()
+        response = {'outgoing': outgoing, 'incoming': incoming}
+        return jsonify(response)
 
 if __name__ == '__main__':
     app.run()
