@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MoneyTransfer.db" beforeDir="false" afterPath="$PROJECT_DIR$/MoneyTransfer.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoints.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnSqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/learnSqlite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1556645141652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$endpoints.coverage" NAME="endpoints Coverage Results" MODIFIED="1558049337607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MoneyTransfer_Backend$learnSqlite.coverage" NAME="learnSqlite Coverage Results" MODIFIED="1556600115335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -35,13 +34,14 @@
     <session id="-999958340">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="17" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.3" value="3" />
-          <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.4" value="8" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -58,14 +58,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="923" />
-          <entry key="py" value="11509" />
+          <entry key="Python Console" value="982" />
+          <entry key="py" value="12648" />
           <entry key="sql" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="12432" />
+          <entry key="Python" value="13630" />
           <entry key="Scratch" value="101" />
         </counts>
       </usages-collector>
@@ -76,13 +76,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/endpoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="254" column="18" lean-forward="true" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+            <state relative-caret-position="210">
+              <caret line="207" column="14" selection-start-line="207" selection-start-column="14" selection-end-line="207" selection-end-column="14" />
               <folding>
-                <marker date="1556644423414" expanded="true" signature="322:663" ph="..." />
-                <marker date="1556644423414" expanded="true" signature="2160:2481" ph="..." />
-                <marker date="1556644423414" expanded="true" signature="3527:3528" ph="..." />
-                <marker date="1556644423414" expanded="true" signature="8087:8772" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="322:663" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="2160:2889" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="2522:2889" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="3935:3936" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="5250:6305" ph="..." />
+                <marker date="1557872267938" expanded="true" signature="9620:10305" ph="..." />
               </folding>
             </state>
           </provider>
@@ -262,12 +264,12 @@
     <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2802198" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30830282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2737968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2737968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,13 +317,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/endpoints.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="254" column="18" lean-forward="true" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="207" column="14" selection-start-line="207" selection-start-column="14" selection-end-line="207" selection-end-column="14" />
           <folding>
-            <marker date="1556644423414" expanded="true" signature="322:663" ph="..." />
-            <marker date="1556644423414" expanded="true" signature="2160:2481" ph="..." />
-            <marker date="1556644423414" expanded="true" signature="3527:3528" ph="..." />
-            <marker date="1556644423414" expanded="true" signature="8087:8772" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="322:663" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="2160:2889" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="2522:2889" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="3935:3936" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="5250:6305" ph="..." />
+            <marker date="1557872267938" expanded="true" signature="9620:10305" ph="..." />
           </folding>
         </state>
       </provider>

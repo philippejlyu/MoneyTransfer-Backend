@@ -81,6 +81,24 @@ def verify_user_exists(user: str) -> bool:
     conn.commit()
     return result is not None
 
+def get_user_data(username: str) -> Tuple:
+    """
+    Return a tuple of user information
+
+    Returns in this order
+    username
+    hashed password
+    balance
+    """
+    conn = sqlite3.connect('MoneyTransfer.db')
+    c = conn.cursor()
+    t = (username,)
+    c.execute("SELECT * FROM users WHERE username=?", t)
+    user_data = c.fetchone()
+    c.close()
+    conn.commit()
+    return jsonify(user_data)
+
 
 @app.route('/createaccount', methods=['POST'])
 def create_account():
@@ -155,6 +173,36 @@ def login():
                 return jsonify(invalid_credentials)
     else:
         abort(400)
+
+@app.route('/changePassword', methods=['POST'])
+def change_password():
+    """
+    Change the user password
+    === Header ===
+    Authorization: Basic Authorization header
+    new_password: The new password
+    token: The token that was given by the server to the client
+    """
+    token = request.headers['token']
+    username = request.authorization['username']
+    password = request.authorization['password']
+    new_password = generate_password_hash(request.headers['new_password'])
+    if get_username_for_access_token(token) == username:
+        user_info = get_user_record(username)
+        if user_info[0] == username and check_password_hash(user_info[1],
+                                                            password):
+            conn = sqlite3.connect("MoneyTransfer.db")
+            c = conn.cursor()
+            temp_data = (new_password, username)
+            c.execute("UPDATE users SET password=? WHERE username=?", temp_data)
+            c.close()
+            conn.commit()
+            response = {'success': 'Password changed'}
+            return jsonify(response)
+
+    else:
+        abort(403)
+
 
 @app.route('/transfer', methods=["POST"])
 def transfer():
